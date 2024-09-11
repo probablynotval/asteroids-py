@@ -26,4 +26,11 @@ class CircleShape(pygame.sprite.Sprite):
     def collides_with(self, obj: CircleShape) -> bool:
         radii = self.radius + obj.radius
         distance_from_center = self.position.distance_to(obj.position)
-        return distance_from_center - radii <= 0
+        # for debugging
+        # if distance_from_center - radii <= -8:
+        #     print(f"Radius of self: {self.radius}")
+        #     print(f"Radius of obj: {obj.radius}")
+        #     print(f"Position of self: {self.position}")
+        #     print(f"Position of obj: {obj.position}")
+        #     return True
+        return distance_from_center - radii <= -8
